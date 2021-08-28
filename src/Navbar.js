@@ -2,9 +2,9 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <h1>The Dojo Blog</h1>
-            <div className="links">
-                <a href="/">Home</a>
-                <a href="/create">New Blog</a>
+            <div className="container">
+                <a href="/"><span>Home</span></a>
+                <a href="/create"><span>New Blog</span></a>
             </div>
         </nav>
     );
