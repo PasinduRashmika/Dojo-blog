@@ -1,0 +1,17 @@
+{
+    "blogs":[
+        {"title":"My new website", 
+            "body":"Lorem ipsum dolor sit amet   elit. Quo, quam porro. Minus iusto quidem ullam?",
+            "author":"mario",
+            "id":1},
+        {"title":"Welcome to party", 
+            "body":"Lorem ipsum dolor sit amet   elit. Quo, quam porro. Minus iusto quidem ullam?",
+            "author":"yoshi",
+            "id":2},
+        {"title":"Web dev top tips", 
+            "body":"Lorem ipsum dolor sit amet   elit. Quo, quam porro. Minus iusto quidem ullam?",
+            "author":"mario",
+            "id":3}
+    ]
+
+}

@@ -140,13 +140,15 @@
   color: #00ccff;
   margin-bottom: 8px;
 }
+
+         /*Deleted item's styels*/
 /*.navbar a{
   color: #fff;
   font-size: 18px;
   box-sizing: border-box;
   background-color: #f1356d;
   border-radius: 5px;
-}*/
+}
 .blog-preview button{
   height: 40px;
   width: 120px;
@@ -162,7 +164,7 @@
   color: #f00;
   cursor: pointer;
   font-weight: 800;
-}
+}*/
 
 .btn1{
   padding: 5px;

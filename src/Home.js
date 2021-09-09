@@ -1,21 +1,19 @@
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import BlogList from './BlogList';
+import useFetch from './useFetch';
+import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion'
 
 const Home = () => {
-    const [blogs, setBlogs]=useState([
-        {title:'My new website', body:'Lorem ipsum dolor sit amet   elit. Quo, quam porro. Minus iusto quidem ullam?',author:'mario',id:1},
-        {title:'Welcome to party', body:'Lorem ipsum dolor sit amet   elit. Quo, quam porro. Minus iusto quidem ullam?',author:'yoshi',id:2},
-        {title:'Web dev top tips', body:'Lorem ipsum dolor sit amet   elit. Quo, quam porro. Minus iusto quidem ullam?',author:'mario',id:3}
-    ]);
-    const handelDelete = (id) => {
-        const newBlogs = blogs.filter(blog => blog.id !== id);
-        setBlogs(newBlogs);
-    }
-    return (
-        <div className="home">
-            <BlogList blogs={blogs} blogTitle="All Blogs" handelDelete={handelDelete}/>
-        </div>
-    );
-}
- 
+    const {data:blogs, isPending, error} = useFetch("http://localhost:8000/blogs");
+  return (
+    <div className="home">
+        <motion.h2 animate={{ fontSize: 50 }}>Welcome to Our Flatform</motion.h2>
+        {error && (<div>{error}</div>)}
+      {isPending && <div><h3>Loading....</h3></div>}
+      {blogs && <BlogList blogs={blogs} blogTitle="All Blogs" />}
+    </div>
+  );
+};
+
 export default Home;
